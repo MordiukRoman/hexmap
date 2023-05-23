@@ -1,11 +1,5 @@
-1. export array show on screen with copy button
+4. building map algorithm, use react to paste svg html§
 2. support for custom colors, save color in array or number color corelation.
 3. import array and build hexmap from it
-4. building map algorithm, use react to paste svg html§
+1. export array show on screen with copy button
 
-echo "# hexmap" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/MordiukRoman/hexmap.git
