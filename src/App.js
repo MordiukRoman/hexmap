@@ -1,7 +1,8 @@
 import './App.css';
 import hexArrayMock from './hexArrayMock';
 
-const delta = 173.2;
+const deltaX = 173.2;
+const deltaY = 50;
 
 const terrainTypeToTerrainName = (terrainType) => {
   if (!terrainType) return 'hide';
@@ -97,17 +98,27 @@ const hexPointArray = [
 ];
 
 const generateHexPoints = (rowIndex, hexIndex) => {
-  return `${hexPointArray
-    .map((point) => `L
-      ${point[0] + hexIndex * delta + (rowIndex % 2)*delta/2},
-      ${point[1] + rowIndex * 50}`)}Z`
-    .replace('L','M');
+  return `${hexPointArray.map(
+    (point) => `L
+      ${point[0] + hexIndex * deltaX + ((rowIndex % 2) * deltaX) / 2},
+      ${point[1] + rowIndex * deltaY}`
+  )}Z`.replace('L', 'M');
 };
 
 function App() {
   return (
     <div className="App">
-      <svg id="hex-map" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3581.5 4957.7">
+      <svg
+        id="hex-map"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox={`
+          0 
+          0 
+          ${Math.floor(deltaY + deltaX * hexArrayMock[0].length)} 
+          ${Math.floor(deltaY + deltaY * hexArrayMock.length)}
+        `}
+      >
         {hexArrayMock.map((row, rowIndex) => (
           <g class="row">
             {row.map((hex, hexIndex) => (
