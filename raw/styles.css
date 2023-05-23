@@ -1,0 +1,520 @@
+/*
+    Theme Name: Molotov Cockatiel
+    Author: Bill Kalpakoglou
+    Author URI: https://molotovcockatiel.com
+    Description: Theme for Molotov Cockatiel
+    Version: 1.0
+ */
+ :root {
+  --main-teal: #26b9d9;
+  --main-yellow: #ffdc00;
+  --main-red: #ff3b38;
+  --main-orange: #ffa100;
+  --cool-gray: #78a1aa;
+  --util-gray: #676767;
+  --main-text: #333333;
+  --border-radius: 4px;
+  --font-body: "Nunito Sans", Arial, sans-serif;
+  --font-heading: "DM Serif Display", Georgia, serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #ffffff;
+  color: var(--main-text);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  font-size: 4.8rem;
+}
+
+h2 {
+  font-size: 3.6rem;
+}
+
+h3 {
+  font-size: 2.8rem;
+}
+
+h4 {
+  font-size: 2.4rem;
+}
+
+h5 {
+  font-size: 2.1rem;
+}
+
+h6 {
+  font-size: 1.6rem;
+}
+
+p {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+}
+
+li {
+  font-size: 1.6rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-heading);
+  color: var(--cool-gray);
+  font-weight: normal;
+  line-height: 1;
+  margin-bottom: 1.6rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-teal);
+  font-weight: bold;
+}
+
+header {
+  width: 100%;
+  display: block;
+  position: relative;
+  height: 10.6rem;
+}
+
+#molotov-cockatiel-logo {
+  width: 35rem;
+  height: auto;
+  position: absolute;
+  top: 0.2rem;
+  left: 2rem;
+}
+
+button,
+.wp-block-search .wp-block-search__input,
+input[type="text"],
+input[type="number"],
+input[type="button"],
+input[type="email"],
+input[type="submit"] {
+  -webkit-appearance: none !important;
+     -moz-appearance: none !important;
+          appearance: none !important;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  height: 6rem;
+  font-size: 1.8rem;
+  border: 2px solid #ccc;
+  padding: 1rem;
+}
+
+textarea {
+  width: 100%;
+  border-radius: var(--border-radius);
+  border: 2px solid #ccc;
+}
+
+form label {
+  display: block;
+  width: 100%;
+}
+
+input[type="radio"] {
+  height: 2.4rem;
+  width: 2.4rem;
+  cursor: pointer;
+}
+
+button,
+.wp-block-search .wp-block-search__button,
+input[type="button"],
+input[type="submit"] {
+  background: var(--main-teal);
+  color: #fff;
+  font-weight: 500;
+  border: none;
+}
+
+button:hover,
+.wp-block-search .wp-block-search__button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover {
+  background-color: var(--main-red);
+}
+
+input[type="submit"] {
+  padding: 0.8rem 3.4rem;
+  margin-top: 2.4rem;
+}
+
+.wp-block-search__label {
+  display: none;
+}
+
+.wp-block-search .wp-block-search__button {
+  margin-left: 0.4rem;
+}
+
+nav {
+  position: absolute;
+  top: 4rem;
+  right: 2rem;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav li {
+  float: left;
+  padding-left: 2rem;
+}
+
+nav a {
+  color: var(--main-teal);
+  font-family: var(--font-heading);
+  font-weight: normal;
+  font-size: 2.1rem;
+}
+
+nav a:hover {
+  color: var(--main-red);
+}
+
+/* Start Youtube */
+.iframe-container {
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
+}
+
+.iframe-container iframe {
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* End Youtube */
+/* START NAVIGATION */
+.ham-parent {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 15px;
+  width: 36px;
+  height: 35px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.ham-parent button {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+  background-color: transparent;
+}
+
+.ham-parent span {
+  display: block;
+  position: absolute;
+  top: 16px;
+  left: 5px;
+  height: 3px;
+  background: var(--main-teal);
+  width: 26px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.ham-parent span::before,
+.ham-parent span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--main-teal);
+  content: "";
+}
+
+.ham-parent span::before {
+  top: -8px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+.ham-parent span::after {
+  bottom: -8px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+.ham-parent.isactive span {
+  background: none;
+}
+
+.ham-parent.isactive span::before {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+.ham-parent.isactive span::after {
+  bottom: 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+/* END NAVIGATION */
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  margin: 0 auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.content {
+  max-width: 90rem;
+  -webkit-box-flex: 3;
+      -ms-flex: 3 auto;
+          flex: 3 auto;
+  padding: 3rem 1rem;
+}
+
+.home .content {
+  max-width: 130rem;
+}
+
+.aside {
+  max-width: 28rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 auto;
+          flex: 1 auto;
+  padding: 3rem 1rem;
+}
+
+.posts h2 a {
+  font-weight: normal;
+  color: var(--cool-gray);
+}
+
+.posts h2 a:hover {
+  text-decoration: underline;
+}
+
+.posts img {
+  max-width: 30rem;
+}
+
+.posts article {
+  margin-bottom: 5rem;
+}
+
+.home .wp-block-column .wp-block-image {
+  height: 19vh;
+  overflow: hidden;
+}
+
+.single h2,
+.single-post h2,
+.post-template-default h2 {
+  font-size: 3.2rem;
+  color: var(--main-orange);
+}
+
+.single ul,
+.single-post ul,
+.post-template-default ul {
+  padding-left: 4.8rem;
+  margin-bottom: 2.4rem;
+}
+
+.single li,
+.single-post li,
+.post-template-default li {
+  margin-bottom: 0.8rem;
+}
+
+.single figcaption,
+.single .comment p,
+.single-post figcaption,
+.single-post .comment p,
+.post-template-default figcaption,
+.post-template-default .comment p {
+  font-size: 1.5rem;
+  color: var(--util-gray);
+  margin-bottom: 1.6rem;
+}
+
+.single .post-thumbnail,
+.single-post .post-thumbnail,
+.post-template-default .post-thumbnail {
+  background-size: cover;
+  background-position: center center;
+  height: 16rem;
+  width: 100%;
+}
+
+.meta {
+  font-size: 1.2rem;
+  color: var(--util-gray);
+  margin-bottom: 1.6rem;
+}
+
+footer {
+  text-align: center;
+}
+
+footer li {
+  display: inline-block;
+  padding: 0.5rem 1.6rem;
+}
+
+.newsletter {
+  padding: 3rem 1rem;
+}
+
+.newsletter .newsletter-blurb {
+  max-width: 117rem;
+  margin: 1.6rem auto;
+}
+
+.newsletter form {
+  max-width: 117rem;
+  margin: 0 auto;
+}
+
+.newsletter form p {
+  width: 30%;
+  display: inline-block;
+  margin-right: 1.6rem;
+}
+
+.newsletter form p input[type="text"],
+.newsletter form p input[type="email"] {
+  width: 100%;
+}
+
+.home .newsletter .newsletter-blurb {
+  max-width: 129rem;
+}
+
+.home .newsletter form {
+  max-width: 129rem;
+}
+
+@media all and (max-width: 800px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .ham-parent {
+    display: block;
+  }
+  .nav {
+    height: 0;
+    width: 100%;
+    top: 0;
+    right: 0;
+    background: #efefef;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+    overflow: hidden;
+  }
+  .nav li {
+    float: none;
+    width: 100%;
+  }
+  .nav li a {
+    display: block;
+    width: 80%;
+    text-align: center;
+    font-size: 2.4rem;
+    line-height: 5rem;
+  }
+  .nav.isactive {
+    height: 26rem;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+  }
+  .newsletter form p {
+    width: 50%;
+    display: block;
+  }
+}
+
+@media all and (max-width: 500px) {
+  #molotov-cockatiel-logo {
+    width: 25rem;
+    height: auto;
+  }
+  .ham-parent {
+    top: 30px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
