@@ -85,6 +85,7 @@ const changeTerrain = (terrain) => {
 
 
 const HexMap = ({ hexArray }) => {
+  if (!hexArray) return null;
   return (
       <svg
         id="hex-map"
